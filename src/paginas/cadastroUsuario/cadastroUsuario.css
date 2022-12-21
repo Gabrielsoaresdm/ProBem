@@ -1,0 +1,20 @@
+.imagemfooter{
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/008/863/695/small/medical-health-logo-icon-design-template-health-logo-for-clinic-hospital-medical-center-vector.jpg);
+    background-repeat: no-repeat;
+    width: 100px; 
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 10px;
+    margin-bottom: -60px;
+    mix-blend-mode: darken;
+    padding-top: 20px;
+}
+.texto2{
+font-weight: bold !important;
+padding-top: 20px;
+}
+
+.btnCancelar{
+margin-right: 20px !important;
+}
