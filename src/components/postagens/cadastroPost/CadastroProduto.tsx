@@ -47,14 +47,14 @@ function CadastroProduto() {
     }, [categoria])
 
     useEffect(() => {
-        getCategoria()
+        getCategorias()
         if (id !== undefined) {
             findByIdProduto(id)
         }
     }, [id])
 
-    async function getCategoria() {
-        await busca("/categoria", setCategoria, {
+    async function getCategorias() {
+        await busca("/categoria", setCategorias, {
             headers: {
                 'Authorization': token
             }
@@ -102,21 +102,23 @@ function CadastroProduto() {
     }
 
     function back() {
-        navigate('/produtos')
+        navigate('/doacoes')
     }
 
     return (
-        <Container maxWidth="sm" className="topo">
- 
-            <form onSubmit={onSubmit}>
+    <div className="card-color">
+        <Container maxWidth="sm" className="topo card-color">
             <Typography className='cadastro' variant="h3" color="textSecondary" component="h1" align="center" >Cadastrar doação</Typography>
+            <form onSubmit={onSubmit}>
+                
                 <TextField value={produto.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="nome" label="Nome" variant="outlined" name="nome" margin="normal" fullWidth />
                 <TextField value={produto.email} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="email" label="E-mail" variant="outlined" name="email" margin="normal" fullWidth />
                 <TextField value={produto.contato} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="contato" label="Celular" variant="outlined" name="contato" margin="normal" fullWidth />
                 <TextField value={produto.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="foto" label="Foto" name="foto" variant="outlined" margin="normal" fullWidth />
 
+
                 <FormControl >
-                    <InputLabel id="demo-simple-select-helper-label">Categoria </InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label">Categoria</InputLabel>
                     <Select
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
@@ -132,12 +134,13 @@ function CadastroProduto() {
                         }
                     </Select>
                     <FormHelperText>Escolha uma categoria para o produto</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary">
+                    <Button type="submit" variant="contained" className='btn-cadastro'>
                         Finalizar
                     </Button>
                 </FormControl>
             </form>
         </Container>
+    </div>
     )
 }
 export default CadastroProduto;

@@ -68,5 +68,12 @@
     background: #DEB93C;
     border-radius: 4px;
     color: white;
-   cursor: ho;
+}
+
+.botao1:hover{
+        cursor: pointer;
+        
+}
+.botao2:hover{
+    cursor: pointer;
 }

@@ -1,18 +1,13 @@
-.imagemfooter{
-    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/008/863/695/small/medical-health-logo-icon-design-template-health-logo-for-clinic-hospital-medical-center-vector.jpg);
+.imagem {
+    background-image: url(https://www.diocesedeblumenau.org.br/site/padreraul/wp-content/uploads/sites/11/2021/01/servira.jpg);
     background-repeat: no-repeat;
-    width: 100px; 
-    min-height: 200px;
+    width: 100vh;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
-    margin-top: 10px;
-    margin-bottom: -60px;
-    mix-blend-mode: darken;
-    padding-top: 20px;
 }
 .texto2{
 font-weight: bold !important;
-padding-top: 20px;
 }
 
 .btnCancelar{

@@ -62,18 +62,10 @@ function CadastroUsuario() {
     return (
 
         <Grid container direction='row' justifyContent='center' alignItems='center'>
-      
-    
-
-         <Grid container direction='row' justifyContent='center' alignItems='center'>
-            <Grid xs={2} className='imagemfooter'>
-            </Grid>
-        </Grid>
-
+            <Grid item xs={6} className='imagem'></Grid>
             <Grid item xs={6} alignItems='center'>
                 <Box paddingX={10}>
                     <form onSubmit={onSubmit}>
-                 
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='texto2'>Cadastre-se</Typography>
                         <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' variant="outlined" name='nome' margin='normal' fullWidth />
                         <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' variant="outlined" name='usuario' margin='normal' fullWidth />

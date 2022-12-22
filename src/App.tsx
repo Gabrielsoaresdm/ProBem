@@ -18,49 +18,55 @@ import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCa
 import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import store from './store/store';
+import DeletarProduto from './components/postagens/deletarPostagem/DeletarPostagem';
 
 
 function App() {
   return (
 
     <Provider store={store}>
-      <ToastContainer />
-      <Router>
-        <Navbar />
-        <div style={{ minHeight: '100vh' }}>
-          <Routes>
-            <Route path='/' element={<Login />} />
+    <ToastContainer />
+    <Router>
+      <Navbar />
+      <div style={{ minHeight: '100vh' }}>
+        <Routes>
+          <Route path='/' element={<Login />} />
 
-            <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<Login />} />
 
-            <Route path='/home' element={<Home />} />
+          <Route path='/home' element={<Home />} />
 
-            <Route path='/sobre' element={<Sobre />} />
+          <Route path='/sobre' element={<Sobre />} />
 
-            <Route path='/contato' element={<Contato />} />
+          <Route path='/contato' element={<Contato />} />
 
-            <Route path='/cadastrousuario' element={<CadastroUsuario />} />
-            
-            <Route path='/doacoes' element={<Doacoes />} />
+          <Route path='/cadastrousuario' element={<CadastroUsuario />} />
+          <Route path='/doacoes' element={<ListaProduto />} />
 
-            <Route path="/formularioProduto" element={<CadastroProduto />} />
+          <Route path="/formularioProduto" element={<CadastroProduto />} />
 
-            <Route path="/formularioProduto/:id" element={<CadastroProduto />} />
+          <Route path="/formularioProduto/:id" element={<CadastroProduto />} />
 
-            <Route path='/produtos' element={<ListaProduto />} />
+          {/* <Route path='/produtos' element={<ListaProduto />} /> */}
+          
+          <Route path='/deletar/:id' element={<DeletarProduto />} />
 
-            <Route path='/categoria' element={<ListaCategoria />} />
+         
 
-            <Route path="/formularioCategoria" element={<CadastroCategoria />} />
+         
 
-            <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
+          <Route path='/categoria' element={<ListaCategoria />} />
 
-            <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+          <Route path="/formularioCategoria" element={<CadastroCategoria />} />
 
-          </Routes>
-        </div>
-        <Footer />
-      </Router>
+          <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
+
+          <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+
+        </Routes>
+      </div>
+      <Footer />
+    </Router>
     </Provider>
   );
 }

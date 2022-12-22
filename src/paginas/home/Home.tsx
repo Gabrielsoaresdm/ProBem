@@ -1,9 +1,18 @@
 import { Button, Grid, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
 import React from "react";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
 import './Home.css'
 
 function Home() {
+
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    )
+
+    console.log(token)
+
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center">

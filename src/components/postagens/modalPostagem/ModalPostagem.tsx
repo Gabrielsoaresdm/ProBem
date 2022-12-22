@@ -62,7 +62,7 @@ function ModalProduto () {
     <div>
       <Button
         variant="outlined"
-        className="btnModal"
+        className="btn-cadastro1"
         onClick={handleOpen}>Cadastrar doações</Button>
       <Modal
         open={open}

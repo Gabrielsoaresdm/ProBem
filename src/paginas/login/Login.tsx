@@ -60,7 +60,7 @@ function Login() {
             </Grid>
         </Grid>
         <Grid container direction='row' justifyContent='center' alignItems='center'>
-            <Grid alignItems='center' xs={7}>
+            <Grid alignItems='center' xs={12}>
                 <Box padding={20}>
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center'>Entrar</Typography>

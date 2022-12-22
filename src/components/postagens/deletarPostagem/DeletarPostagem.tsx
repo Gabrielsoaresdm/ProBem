@@ -50,26 +50,26 @@ function DeletarProduto() {
         }
 
         function sim() {
-          navigate('/produto')
+          navigate('/produtos')
             deleteId(`/produto/${id}`, {
               headers: {
                 'Authorization': token
               }
             });
-            toast.success('Produto deletada com sucesso', {
-              position: "top-right",
-              autoClose: 2000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: false,
-              draggable: false,
-              theme: "colored",
-              progress: undefined,
-          });
+          //   toast.success('Produto deletada com sucesso', {
+          //     position: "top-right",
+          //     autoClose: 2000,
+          //     hideProgressBar: false,
+          //     closeOnClick: true,
+          //     pauseOnHover: false,
+          //     draggable: false,
+          //     theme: "colored",
+          //     progress: undefined,
+          // });
           }
         
           function nao() {
-            navigate('/produto')
+            navigate('/produtos')
           }
   return (
     <>
